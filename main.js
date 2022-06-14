@@ -15,7 +15,6 @@ myArray.forEach(function(item){
      rate.style.color="white"
      rate.style.marginRight="1vw"
      rate.style.marginBottom="1vw"
-
      function change(){
         rate.style.backgroundColor="#7C8899"
         // const answer= "You have selected "+ rate.value
@@ -25,12 +24,13 @@ myArray.forEach(function(item){
      }
      rate.addEventListener("mouseenter",change,true)
 
-     function removeEvent(){
-        // console.log("hdhdhd")
-        rate.style.backgroundColor="#242D37"
-        // rate.removeEventListener("mouseenter",change,true)
-     }
-     rate.addEventListener("mouseleave",removeEvent)
+    //  function removeEvent(){
+    //     console.log("hdhdhd")
+    //         rate.style.backgroundColor="#242D37"
+    //     rate.removeEventListener("mouseenter",change,true)
+    //  }
+    //  rate.addEventListener("mouseleave",removeEvent)
+    
      function clicking(){
         rate.style.backgroundColor="#EF7321"
         i= rate.value
@@ -47,6 +47,7 @@ const myButton=document.getElementById("submitting");
         const thankImage=document.querySelector("img");
         thankImage.src="images/illustration-thank-you.svg"
         thankImage.style.margin="1vw 8vw"
+        thankImage.style.width="13vw"
 
         const success=document.createElement("p")
         success.id="new"
