@@ -5,24 +5,29 @@ const myArray=[1,2,3,4,5];
   let i=0;
 myArray.forEach(function(item){
     const rate=document.createElement("button");
+    const rate_active=document.querySelector(".btn.active")
+    console.log(rate_active)
      rate.innerHTML=item
      document.getElementById("content").appendChild(rate)
      rate.value=item
      rate.style.borderRadius="50%"
-     rate.style.backgroundColor="#242D37"
+    //  rate.style.backgroundColor="#242D37"
      rate.style.border="none"
      rate.style.padding="1.5vw 2vw"
      rate.style.color="white"
      rate.style.marginRight="1vw"
      rate.style.marginBottom="1vw"
-     function change(){
-        rate.style.backgroundColor="#7C8899"
+     rate.classList.add("btn")
+    //  function change(){
+    //     rate.style.backgroundColor="#7C8899"
         // const answer= "You have selected "+ rate.value
         // success.innerHTML=answer
         // const main=document.getElementById("new")
         // main.innerHTML ="ghghhghg"
-     }
-     rate.addEventListener("mouseenter",change,true)
+    //  }
+    //  rate.addEventListener("mouseenter",change,true)
+
+
 
     //  function removeEvent(){
     //     console.log("hdhdhd")
@@ -30,13 +35,38 @@ myArray.forEach(function(item){
     //     rate.removeEventListener("mouseenter",change,true)
     //  }
     //  rate.addEventListener("mouseleave",removeEvent)
-    
-     function clicking(){
-        rate.style.backgroundColor="#EF7321"
-        i= rate.value
-     }
 
-       rate.addEventListener("click", clicking)
+      //  while(i>0){
+      //         console.log(i)
+      //   rate.addEventListener("click", clicking)
+      //  }
+
+    
+      function clicking(event){
+        // rate.classList.remove("active")
+        rate.classList.toggle("btn:focus")
+        // console.log(event.target.value)
+        // rate.style.backgroundColor="#EF7321"
+        i= rate.value            
+     }
+    //  for(i;i==0;i=rate.value){
+    //   console.log(i)
+      rate.addEventListener("click", clicking)
+          
+          // if(i>0){
+          //     break
+          // }
+      // }
+    //  if(i>=0){
+    //   break
+      // console.log(i)
+      // rate.addEventListener("click", clicking)
+    //  }
+    //  else{
+    //   console.log('www')
+    //  }
+    // rate.addEventListener("click", clicking)
+     
     //  console.log(rate.value)
 })
 
